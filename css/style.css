@@ -69,11 +69,55 @@ header {
   #tituloMain {
       color: rgb(231, 125, 143);
       text-align: center;
+      font-family:  DroidSansB;
   }
 
-  img {
+  .imgResponsive {
       width: 25%;
       margin: 4%;
+  }
+
+  .container {
+    position: relative;
+    width: 25%;
+    display: inline-block;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: grey
+  }
+
+  .container:hover .overlay {
+    opacity: 0.8;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 
 
@@ -95,7 +139,7 @@ header {
  /* Media querys */
 
  @media screen and (max-width: 850px) {  
-    img {
+    .imgResponsive {
         width: 40%;
     }
   }
@@ -105,7 +149,7 @@ header {
 
 @media screen and (max-width: 550px) {
     
-    img {
+    .imgResponsive {
         width: 94%;
     }
 
